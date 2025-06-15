@@ -125,5 +125,5 @@ Let me know if your project has auth, deployment (e.g. Vercel or Render), or a c
 
 
 contact me for more details ---- anasali0029@gmail.com
-Github ---- 1m-anas
+Github ---- 1tz-anas
 Linkedln ---- https://www.linkedin.com/in/mohammedanas16/
