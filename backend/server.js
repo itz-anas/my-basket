@@ -1,4 +1,4 @@
-// server.js
+// backend/server.js
 import express from "express";
 import dotenv from "dotenv";
 import path from "path";
@@ -12,17 +12,17 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Fix __dirname with ES Module syntax
+// Fix __dirname with ES Module
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Middleware to parse JSON
+// Middleware
 app.use(express.json());
 
-// API routes
+// API Routes
 app.use("/api/products", productRoutes);
 
-// Serve static frontend in production
+// Serve frontend in production
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
@@ -34,7 +34,5 @@ if (process.env.NODE_ENV === "production") {
 // Start server
 app.listen(PORT, () => {
   connectDB();
-  console.log(`🚀 Server started at http://localhost:${PORT}`);
-});
-
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
